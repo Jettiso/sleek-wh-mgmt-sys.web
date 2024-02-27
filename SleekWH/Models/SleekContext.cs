@@ -6,7 +6,7 @@ namespace SleekWH.Data
 {
     public class SleekContext : DbContext
     {
-        public SleekContext(DbContextOptions<SleekContext> options) : base(options)
+        public SleekContext(DbContextOptions options) : base(options)
         {
             
         }
