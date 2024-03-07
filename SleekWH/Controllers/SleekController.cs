@@ -11,19 +11,21 @@ namespace sleekWH.Controllers
     [ApiController]
     public class SleekController : ControllerBase
     {
-        private readonly SleekContext _sleekcontext;
+        private readonly SleekContext _apicontext;
 
-        public SleekController(SleekContext sleekcontext)
+        public SleekController(SleekContext apicontext)
         {
-            _sleekcontext = sleekcontext;
+            _apicontext = apicontext;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ItemModel>>> GetItems()
+        public async Task<ActionResult<IEnumerable<ItemModel>>> GetSleeks()
         {
-            var items = await _sleekcontext.ItemModels.ToListAsync();
+            var items = await _apicontext.ItemModels.ToListAsync();
 
             return Ok(items);
         }
+        
+        
     }
 }

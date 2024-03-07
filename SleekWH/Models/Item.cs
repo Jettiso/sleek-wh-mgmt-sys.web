@@ -14,5 +14,6 @@ namespace SleekWH.Models
         public string ImageUrl { get; set; } = string.Empty;
         public int InventoryStatus { get; set; }
         public string SerialId { get; set; } = string.Empty;
+        public string Picker { get; set; } = string.Empty;
     }
 }
